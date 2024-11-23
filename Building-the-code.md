@@ -1,13 +1,44 @@
-1. Clone the repository
-   * Using HTTP : git clone https://github.com/openMF/mobile-wallet.git
+# **Steps to Clone and Set Up the Mobile Wallet Project**
 
-2. Open Android studio
-3. Click on 'Open an existing android studio project'
-4. Browse to the directory where you cloned mobile-wallet repo and click OK.
-5. Let Android studio import the project
+1. **Clone the Repository**
+   - Using HTTP:  
+     ```bash
+     git clone https://github.com/openMF/mobile-wallet.git
+     ```
 
-  You will see an error in gradle build related to missing RblClientIdProp and RblClientSecretProp
+2. **Open Android Studio**  
+   - Launch Android Studio on your system.
 
-6. Add RblClientIdProp and RblClientSecretProp as environment variables with any value
+3. **Import the Project**  
+   - Click on **`Open an existing Android Studio project`**.  
+   - Browse to the directory where you cloned the `mobile-wallet` repository.  
+   - Select the folder and click **OK**.  
 
-7. Sync the project again in Android studio
+4. **Gradle Sync**  
+   - Let Android Studio import the project.  
+   - You may encounter an error during the Gradle build related to missing properties:  
+     - **`RblClientIdProp`**  
+     - **`RblClientSecretProp`**  
+
+5. **Add Environment Variables**  
+   - Define the following environment variables with any value:  
+     - `RblClientIdProp`  
+     - `RblClientSecretProp`  
+
+     Example for Linux/Mac:  
+     ```bash
+     export RblClientIdProp=your_value
+     export RblClientSecretProp=your_value
+     ```
+
+     Example for Windows (Command Prompt):  
+     ```cmd
+     set RblClientIdProp=your_value
+     set RblClientSecretProp=your_value
+     ```
+
+6. **Sync the Project Again**  
+   - In Android Studio, click **File > Sync Project with Gradle Files**.  
+   - Wait for the sync to complete successfully.  
+
+You are now ready to start working on the `mobile-wallet` project!
