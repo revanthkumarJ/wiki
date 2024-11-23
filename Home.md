@@ -8,9 +8,9 @@ This page lists the documentation, android studio setup, use cases and other det
 
 3. [Commit style guide](https://github.com/openMF/mobile-wallet/wiki/Commit-style-guide)    
 
-4. [Issue tracker guidelines](https://github.com/openMF/mobile-wallet/blob/master/CONTRIBUTING.md)  
+4. [Issue tracker guidelines](https://github.com/openMF/mobile-wallet/blob/master/.github/CONTRIBUTING.md#issue-tracker)  
 
-5. [Pull request guidelines](https://github.com/openMF/mobile-wallet/blob/master/CONTRIBUTING.md)  
+5. [Pull request guidelines](https://github.com/openMF/mobile-wallet/blob/master/.github/CONTRIBUTING.md#pull-requests)  
 
 ## Documentation
 
