@@ -1,40 +1,61 @@
 # **Git Commit Message Style Guide**
 
-## Commit Messages
+## **Commit Messages**
 
-### Message Structure
+### **Message Structure**
 
-A commit messages consists of three distinct parts separated by a blank line: the title, an optional body and an optional footer. The layout looks like this:
+A commit message consists of three distinct parts separated by a blank line:  
 
+1. **Title**: Contains the type and subject (mandatory).  
+2. **Body**: Provides additional details or context (optional).  
+3. **Footer**: Includes metadata like issue references or breaking changes (optional).  
+
+The layout looks like this:  
+
+```plaintext
 type: subject
 
 body
 
 footer
+```
 
 ---
+## **Title**
 
-The title consists of the type of the message and subject.
+The **title** consists of two parts:  
+1. **Type**: Indicates the category of the commit.  
+2. **Subject**: A concise description of the change.
 
-### The Type
 
-The type is contained within the title and can be one of these types:
+### **The Type**
 
-* **feat**: a new feature  
-* **fix**: a bug fix  
-* **docs**: changes to documentation  
-* **style**: formatting, missing semi colons, etc; no code change  
-* **refactor**: refactoring production code  
-* **test**: adding tests, refactoring test; no production code change  
-* **chore**: updating build tasks, package manager configs, etc; no production code change  
-## The Subject
+The type specifies the nature of the commit and must be one of the following:  
 
-Subjects should be no greater than 50 characters, should begin with a capital letter and do not end with a period.
+- **feat**: A new feature.  
+- **fix**: A bug fix.  
+- **docs**: Changes to documentation.  
+- **style**: Code style changes (e.g., formatting, missing semicolons) without logic changes.  
+- **refactor**: Refactoring code without altering external behavior.  
+- **test**: Adding or updating tests without affecting production code.  
+- **chore**: Maintenance tasks (e.g., updating build tools or configs) with no production code changes.  
 
-Use an imperative tone to describe what a commit does, rather than what it did. For example, use change; not changed or changes.
 
-## The Body
+### **The Subject**
 
-Not all commits are complex enough to warrant a body, therefore it is optional and only used when a commit requires a bit of explanation and context. Use the body to explain the what and why of a commit, not the how.
+- Limit the subject to **50 characters** or fewer.  
+- Start with a **capital letter**.  
+- Avoid ending the subject with a period.  
 
-When writing a body, the blank line between the title and the body is required and you should limit the length of each line to no more than 72 characters.
+**Tip**: Use an **imperative tone** to describe what the commit does.  
+For example:  
+- Use *"Change"* instead of *"Changed"* or *"Changes"*.
+## **The Body**
+
+The body is **optional** and should only be used when the commit requires further explanation or context. It helps clarify **what** the commit does and **why** it is necessary. Avoid explaining **how** the changes were made, as that information is usually captured in the code itself.
+
+### **Guidelines for the Body:**
+
+- Leave a blank line between the title and the body.  
+- Limit the length of each line in the body to **72 characters** for readability.  
+- Be concise but informative. Use the body to clarify complex commits that are not immediately obvious from the title.  
