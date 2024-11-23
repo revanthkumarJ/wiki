@@ -1,4 +1,10 @@
-This project is based on [Clean Architecture](https://github.com/android10/Android-CleanArchitecture).
+This project is based on Clean Architecture.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b4964d38-c04d-4711-9cfd-55c80782d7a2" alt="Clean Architecture 1" width="400">
+  <img src="https://github.com/user-attachments/assets/ebba2eb3-bb50-4f85-8e87-30a2bc708c34" alt="Clean Architecture 2" width="400">
+</p>
+
 
 The presentation and UI layers are implemented in the app modules, while the data and domain layers are implemented in the core module. Each use case is a standalone feature of the wallet framework and can be directly used by the client apps.
 
