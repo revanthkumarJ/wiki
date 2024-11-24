@@ -59,34 +59,40 @@ In MacOS, Windows or Linux, you should run the following commands before opening
 ```
 
 2. **Apply Spotless Formatting**
-  Check and apply formatting to any file with this command:
+   
+   Check and apply formatting to any file with this command:
 ```bash
 ./gradlew spotlessApply --no-configuration-cache
 ```
-3. **Generate Dependency-Guard Baseline** 
+3. **Generate Dependency-Guard Baseline**
+   
    Use this command to generate a dependency-guard baseline:
 ```bash
 ./gradlew dependencyGuardBaseline
 ```
 
-4.** Check Detekt Errors**
-Run this command to check for Detekt errors:
+4. **Check Detekt Errors**
+   
+   Run this command to check for Detekt errors:
 ```bash
 ./gradlew detekt
 ```
-5.**Run Lint and Test Commands**
-Execute this command to check for lint and test errors:
+5. **Run Lint and Test Commands**
+
+   Execute this command to check for lint and test errors:
 ```bash
 ./gradlew testDemoDebug :lint:test :mifospay:lintProdRelease :lint:lint
 ```
 
 6. **Build the Project**
-Build the project using the following command:
+   
+   Build the project using the following command:
 ```bash
 ./gradlew build
 ```
 
 7. **Update Prod Release Badging**
+   
    Update the project badging with this command:
 ```bash
 ./gradlew updateProdReleaseBadging
