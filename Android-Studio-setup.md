@@ -1,3 +1,3 @@
-This project requires Android Studio 3.0+ and uses the gradle plugin 3.1.3
+This project requires at least **Android Gradle Plugin (AGP) 8.7.2** and the latest version of **Android Studio**.
 
-Click this [link](https://developer.android.com/studio/index.html#Installing) to get complete info on Download and Setup for your OS.
+For detailed information on downloading and setting up Android Studio for your operating system, please refer to the [official documentation](https://developer.android.com/studio/index.html#Installing).
