@@ -1,35 +1,65 @@
-This project is based on Clean Architecture.
+# Project Overview
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b4964d38-c04d-4711-9cfd-55c80782d7a2" alt="Clean Architecture 1" width="400">
-  <img src="https://github.com/user-attachments/assets/ebba2eb3-bb50-4f85-8e87-30a2bc708c34" alt="Clean Architecture 2" width="400">
-</p>
+This project is based on **Clean Architecture** and follows **Modularization** principles to ensure scalability, maintainability, and easy collaboration among developers.
 
+## The Use of Clean Architecture
 
-The presentation and UI layers are implemented in the app modules, while the data and domain layers are implemented in the core module. Each use case is a standalone feature of the wallet framework and can be directly used by the client apps.
+- **Clarity**: The architecture is easy for developers to understand and follow, ensuring that the system remains maintainable and extensible.
+- **Collaboration**: It supports multiple developers working on the same codebase, with clear separation of concerns and independent modules.
+- **Build Efficiency**: The design minimizes build times, improving overall productivity.
 
-The project is divided into a core library module and various application modules. Currently, the project has the following modules:
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th colspan="3" align="center" style="text-align: center; font-size: 1.5em; padding: 10px;">Clean Architecture</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" style="padding: 10px;">
+        <img src="https://github.com/user-attachments/assets/5ded3799-0746-4b67-816c-cb149b150c5b" alt="Image 2" style="width: 100%; max-width: 200px;"/>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <img src="https://github.com/user-attachments/assets/79f66eb7-e664-43e7-963c-d8e5610c3c25" alt="Image 1" style="width: 100%; max-width: 200px;"/>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <img src="https://github.com/user-attachments/assets/6a949e74-73bd-4506-be1b-8a500fc93b00" alt="Image 3" style="width: 100%; max-width: 200px;"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-### core
+## **Modularization**
 
-This module is the core library module of the wallet framework. All the wallet-related use cases are present in this module.  
-This module contains:  
-1. The data and domain layers.  
-2. All the Fineract API interaction is implemented in this module. Note that the wallet framework is extended on top of the self-service APIs in the Fineract backend.  
-3. The data models are mapped by the use cases internally from the actual API models to simpler models that will be exposed to the client apps.  
-4. All the API and data implementation is located [here](https://github.com/openMF/mobile-wallet/tree/master/core/src/main/java/org/mifos/mobilewallet/core/data).  
-5. Models and use cases are located [here](https://github.com/openMF/mobile-wallet/tree/master/core/src/main/java/org/mifos/mobilewallet/core/domain).
+- The project is divided into independent, self-contained modules, each with its own `build.gradle` file and `src` folder.
+- This structure allows for independent development, testing, and maintainability of each feature.
+- The modular approach promotes separation of concerns, making it easier to manage and extend the project.
 
-### mifospay-shared
+## Project Modules Overview
 
-This module contains shared logic, utilities, and common code that is used across different platforms. It serves as the backbone for the cross-platform implementation of the project.
+### 1. **core**
+The core module is the central library of the wallet framework, containing the foundational components and business logic.
+   - Includes the data and domain layers.
+   - Implements interactions with the Fineract API.
+   - Maps and simplifies data models to be exposed to client apps.
+   - All the API and data implementation is located [here](https://github.com/openMF/mobile-wallet/tree/master/core/src/main/java/org/mifos/mobilewallet/core/data).
+   - Models and use cases are located [here](https://github.com/openMF/mobile-wallet/tree/master/core/src/main/java/org/mifos/mobilewallet/core/domain).
 
-### Platform-Specific Modules
+### 2. **mifospay-shared**
+This module contains shared logic, utilities, and common code for the cross-platform implementation of the project.
 
-The project has transitioned to **Kotlin Multiplatform (KMP)**, and individual modules like Android, iOS, Desktop, and Web have been integrated into the shared architecture. These platform-specific implementations are now part of the following consolidated modules:
+### 3. **Platform-Specific Modules**
+These modules are designed to cater to platform-specific needs while maintaining a shared architecture:
+   - **mifospay-android**: Android-specific implementation.
+   - **mifospay-ios**: iOS-specific implementation.
+   - **mifospay-desktop**: Desktop-specific implementation.
+   - **mifospay-web**: Web-based implementation.
 
-1. **mifospay-android**: Android-specific implementation.
-2. **mifospay-ios**: iOS-specific implementation.
-3. **mifospay-desktop**: Desktop-specific implementation.
-4. **mifospay-web**: Web-based implementation.
+### 4. **feature**
+The feature module contains independent, feature-specific implementations, each encapsulated in its own folder and submodules. This modularized approach allows for isolated development and testing. Example features include:
+   - **accounts**: Manages user account-related functionality.
+   - **payments**: Handles payment processing and transactions.
+   - **settings**: Manages user configuration and settings.
+   - **notifications**: Handles push notifications and alerts.
 
+Each feature is designed to be self-contained, promoting modular development and ease of updates.
