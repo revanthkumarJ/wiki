@@ -57,7 +57,6 @@ These modules are designed to cater to platform-specific needs while maintaining
 
 ### 4. **feature**
 The feature module contains independent, feature-specific implementations, each encapsulated in its own folder and submodules. This modularized approach allows for isolated development and testing. Example features include:
-   - **accounts**: Manages user account-related functionality.
    - **payments**: Handles payment processing and transactions.
    - **settings**: Manages user configuration and settings.
    - **notifications**: Handles push notifications and alerts.
